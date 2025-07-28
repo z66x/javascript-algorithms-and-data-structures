@@ -1,17 +1,21 @@
-function isAlphanumeric(str) {
-  return /^[a-z0-9]+$/i.test(str);
-}
 let button = document.querySelector("#check-btn");
 let result = document.querySelector("#result");
-button.onclick = checkPalindrome;
-function checkPalindrome() {
-	let input = document.querySelector("#input").value;
-	let cleanedInput = input.toLowerCase().split("").filter(isAlphanumeric).join("");
-	let reversedInput = cleanedInput.split("").reverse().join("");
-	
-	if (cleanedInput === reversedInput) {
-		result.textContent = "It's a palindrome!";
-	} else {
-		result.textContent = "It's not a palindrome.";
-	}
+function checkPalindrome(input) {
+  let cleanInput = input.replace(/[^a-zA-Z0-9]/g, "");
+  if (
+    cleanInput.toLowerCase() ===
+    cleanInput.toLowerCase().split("").reverse().join("")
+  )
+    return true;
+  else return false;
 }
+function updateResult() {
+  let input = document.querySelector("#text-input").value;
+  if (input === "") {
+    result.innerHTML = "...";
+    alert("Please input a value");
+    return;
+  }
+  result.innerHTML = `${input} is ${checkPalindrome(input) ? "" : "not "} a palindrome`;
+}
+button.onclick = updateResult;
