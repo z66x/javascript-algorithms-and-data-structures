@@ -12,7 +12,6 @@ function checkPalindrome(input) {
 function updateResult() {
   let input = document.querySelector("#text-input").value;
   if (input === "") {
-    result.innerHTML = "...";
     alert("Please input a value");
     return;
   }

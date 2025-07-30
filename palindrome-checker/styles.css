@@ -17,24 +17,23 @@ body {
     color: white;
     font-family: "Space Grotesk", monospace;
 }
-#palindrome-checker {
-    width: min(600px, 100%);
-    height: min(400px, 100%);
+.main-section {
+    width: min(400px, 100%);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    overflow-y: auto;
     gap: 1rem;
 }
-#palindrome-checker h1 {
+.main-section h1 {
     font-size: 2rem;
 }
-#input {
+#input-container {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
 }
 #text-input {
     width: max(8rem, 100%);
@@ -46,18 +45,13 @@ body {
     text-align: center;
 }
 #check-btn {
-    width: min(8rem, 100%);
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border: 1px solid white;
-    background-color: transparent;
+    background-color: #00ccdd;
+    border: none;
     color: white;
     text-align: center;
-    transition: all 0.5s ease-in-out;
-}
-#check-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
 }
 #result {
     font-size: 1.5rem;
