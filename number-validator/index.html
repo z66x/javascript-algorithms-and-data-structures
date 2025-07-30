@@ -3,21 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Roman Numeral Converter</title>
+        <title>Telephone Number Validator</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <section class="main-section">
-            <h1>Roman Numeral Converter</h1>
+            <h1>Telephone Number Validator</h1>
             <div id="input-container">
                 <input
-                    id="number"
-                    type="number"
-                    placeholder="(decimal number)"
+                    id="user-input"
+                    type="text"
+                    placeholder="( enter a phone number )"
                 />
-                <button id="convert-btn">Convert</button>
+                <div id="btn-div">
+                    <button id="check-btn">check</button>
+                    <button id="clear-btn">clear</button>
+                </div>
             </div>
-            <p id="output"></p>
+            <p id="results-div"></p>
         </section>
         <script src="script.js"></script>
     </body>
